@@ -11,10 +11,11 @@ fastify.register(require('fastify-swagger'), swagger.options);
 fastify.register(require('morgan')('dev'));
 mongoose.promise = global.Promise;
 mongoose.set('debug', true);
+/*
 mongoose.connect('mongodb://localhost/condoapp', { useNewUrlParser: true })
         .then(() => console.log('MongoDB connected!'))
         .catch(err => console.log(err));
-
+*/
 
         fastify.get('/', async (request, reply) => {
     return { message: "OnWave Solutions DR"}

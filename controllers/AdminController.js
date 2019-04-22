@@ -1,5 +1,5 @@
 const boom = require('boom');
-const Admin = require('../models/admin');
+const Admin = require('../app/models/admin');
 
 exports.getAdmins = async (req, reply) => {
     try {

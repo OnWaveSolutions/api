@@ -21,7 +21,7 @@ mongoose.connect('mongodb://localhost/condoapp', { useNewUrlParser: true })
 });
 const start = async () => {
     try {
-        await fastify.listen(1337)
+        await fastify.listen(1337 || process.env.PORT)
         fastify.swagger()
         fastify.log.info(`Server listening @ localhost:${fastify.server.address().port}`)
     } catch (error) {
